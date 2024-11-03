@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "92a15772-2200-4089-b631-bcd9a09699d6",
+		"name": "StarColony",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33329409"
+	},
+	"item": [
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/player/create",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/player/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"player",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-oNF8KaKMdX8ePhvi8ADtQyts7UA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 04 Mar 2024 09:35:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"player\": [\n        {\n            \"player_id\": 13,\n            \"player_name\": \"New Player\",\n            \"last_active\": \"2024-03-04T09:35:30.000Z\",\n            \"credit\": 1000,\n            \"valor\": 1000\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player\": {\n        \"credit\": 400,\n        \"id\": 112,\n        \"inventory\": {\n            \"player_id\": 112,\n            \"asset_count\": [\n                {\n                    \"Key\": 1,\n                    \"Value\": 2000\n                },\n                {\n                    \"Key\": 102,\n                    \"Value\": 10\n                }\n            ]\n        },\n        \"last_active\": \"2024-05-29T21:29:50.000Z\",\n        \"name\": \"New Player 1717043390098\",\n        \"starsystem\": {\n            \"player_id\": 112,\n            \"buildings\": [\n                {\n                    \"asset_id\": 201,\n                    \"id\": 91,\n                    \"planet_id\": 66,\n                    \"slot_id\": 1\n                },\n                {\n                    \"asset_id\": 202,\n                    \"id\": 92,\n                    \"planet_id\": 66,\n                    \"slot_id\": 2\n                },\n                {\n                    \"asset_id\": 204,\n                    \"id\": 93,\n                    \"planet_id\": 66,\n                    \"slot_id\": 3\n                }\n            ],\n            \"planets\": [\n                {\n                    \"asset_id\": 104,\n                    \"id\": 66,\n                    \"player_id\": 112,\n                    \"transform\": {\n                        \"basis\": {\n                            \"x\": {\n                                \"x\": 1,\n                                \"y\": 0,\n                                \"z\": 0\n                            },\n                            \"y\": {\n                                \"x\": 0,\n                                \"y\": 1,\n                                \"z\": 0\n                            },\n                            \"z\": {\n                                \"x\": 0,\n                                \"y\": 0,\n                                \"z\": 1\n                            }\n                        },\n                        \"origin\": {\n                            \"x\": 0,\n                            \"y\": 0,\n                            \"z\": 0\n                        }\n                    }\n                },\n                {\n                    \"asset_id\": 102,\n                    \"id\": 67,\n                    \"player_id\": 112,\n                    \"transform\": {\n                        \"basis\": {\n                            \"x\": {\n                                \"x\": 1,\n                                \"y\": 0,\n                                \"z\": 0\n                            },\n                            \"y\": {\n                                \"x\": 0,\n                                \"y\": 1,\n                                \"z\": 0\n                            },\n                            \"z\": {\n                                \"x\": 0,\n                                \"y\": 0,\n                                \"z\": 1\n                            }\n                        },\n                        \"origin\": {\n                            \"x\": -0.15759299695492,\n                            \"y\": 0.0266113001853228,\n                            \"z\": 0.175537005066872\n                        }\n                    }\n                },\n                {\n                    \"asset_id\": 102,\n                    \"id\": null,\n                    \"player_id\": 112,\n                    \"transform\": {\n                        \"basis\": {\n                            \"x\": {\n                                \"x\": 1,\n                                \"y\": 0,\n                                \"z\": 0\n                            },\n                            \"y\": {\n                                \"x\": 0,\n                                \"y\": 1,\n                                \"z\": 0\n                            },\n                            \"z\": {\n                                \"x\": 0,\n                                \"y\": 0,\n                                \"z\": 1\n                            }\n                        },\n                        \"origin\": {\n                            \"x\": -0.15759299695492,\n                            \"y\": 0.0266113001853228,\n                            \"z\": 0.175537005066872\n                        }\n                    }\n                }\n            ]\n        },\n        \"valor\": 1000\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{server}}/player/update",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/player/buy?player_id=31&asset_id=1&amount=1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"buy"
+							],
+							"query": [
+								{
+									"key": "player_id",
+									"value": "31"
+								},
+								{
+									"key": "asset_id",
+									"value": "1"
+								},
+								{
+									"key": "amount",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "buy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/player/buy?player_id=1&asset_id=1&amount=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"player",
+										"buy"
+									],
+									"query": [
+										{
+											"key": "player_id",
+											"value": "1"
+										},
+										{
+											"key": "asset_id",
+											"value": "1"
+										},
+										{
+											"key": "amount",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-57pAWwoxZGSPekVRLb9VKUt21MM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Apr 2024 14:14:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"player\": {\n        \"id\": 1,\n        \"name\": \"TranLam\",\n        \"last_active\": \"2023-12-27T23:49:15.000Z\",\n        \"credit\": 590,\n        \"valor\": 1000,\n        \"inventory\": [\n            {\n                \"asset_id\": 1,\n                \"count\": 38\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/player/read?player_id=112",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"read"
+							],
+							"query": [
+								{
+									"key": "player_id",
+									"value": "112"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "read",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/player/read?player_id=93",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"player",
+										"read"
+									],
+									"query": [
+										{
+											"key": "player_id",
+											"value": "93"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "466"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d2-0hMRSVdH9/pDQvV9LVZzbp3R5No\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 02:33:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"player\": {\n        \"id\": 93,\n        \"name\": \"New Player 1716085485230\",\n        \"last_active\": \"2024-05-18T19:24:45.000Z\",\n        \"credit\": 1000,\n        \"valor\": 1000,\n        \"inventory\": {\n            \"player_id\": 93,\n            \"asset_count\": [\n                {\n                    \"Key\": 1,\n                    \"Value\": 100\n                }\n            ]\n        },\n        \"starsystem\": {\n            \"buildings\": [\n                {\n                    \"id\": 17,\n                    \"planet_id\": 16,\n                    \"asset_id\": 201,\n                    \"slot_id\": 1\n                },\n                {\n                    \"id\": 18,\n                    \"planet_id\": 16,\n                    \"asset_id\": 202,\n                    \"slot_id\": 2\n                },\n                {\n                    \"id\": 19,\n                    \"planet_id\": 16,\n                    \"asset_id\": 204,\n                    \"slot_id\": 3\n                }\n            ],\n            \"planets\": [\n                {\n                    \"id\": 16,\n                    \"asset_id\": 104,\n                    \"player_id\": 93\n                },\n                {\n                    \"id\": 17,\n                    \"asset_id\": 101,\n                    \"player_id\": 93\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "findMatch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/player/findMatch?player_id=113",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"findMatch"
+							],
+							"query": [
+								{
+									"key": "player_id",
+									"value": "113"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "findMatch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/player/findMatch?player_id=93",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"player",
+										"findMatch"
+									],
+									"query": [
+										{
+											"key": "player_id",
+											"value": "93"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "466"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d2-KR5ts2aYHf3l4DOfD9Iy7oG8mp0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 May 2024 02:35:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"player\": {\n        \"id\": 96,\n        \"name\": \"New Player 1716086122707\",\n        \"last_active\": \"2024-05-18T19:35:23.000Z\",\n        \"credit\": 1000,\n        \"valor\": 1000,\n        \"inventory\": {\n            \"player_id\": 96,\n            \"asset_count\": [\n                {\n                    \"Key\": 1,\n                    \"Value\": 100\n                }\n            ]\n        },\n        \"starsystem\": {\n            \"buildings\": [\n                {\n                    \"id\": 26,\n                    \"planet_id\": 22,\n                    \"asset_id\": 201,\n                    \"slot_id\": 1\n                },\n                {\n                    \"id\": 27,\n                    \"planet_id\": 22,\n                    \"asset_id\": 202,\n                    \"slot_id\": 2\n                },\n                {\n                    \"id\": 28,\n                    \"planet_id\": 22,\n                    \"asset_id\": 204,\n                    \"slot_id\": 3\n                }\n            ],\n            \"planets\": [\n                {\n                    \"id\": 22,\n                    \"asset_id\": 104,\n                    \"player_id\": 96\n                },\n                {\n                    \"id\": 23,\n                    \"asset_id\": 101,\n                    \"player_id\": 96\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "purge",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/player/purge",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"player",
+								"purge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/asset/read?asset_id=1",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"asset",
+								"read"
+							],
+							"query": [
+								{
+									"key": "asset_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "read",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/asset/read?asset_id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"asset",
+										"read"
+									],
+									"query": [
+										{
+											"key": "asset_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-IVy53vPHaeYV8ugKzMALjaK+FQw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 06 Apr 2024 15:59:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"asset\": {\n        \"id\": 1,\n        \"name\": \"Fighter\",\n        \"credit_cost\": 10,\n        \"valor_cost\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{server}}/asset/list",
+							"protocol": "http",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"asset",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/asset/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"asset",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-fxp7BHNy5ZPdkLo1JnWujZReocY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Apr 2024 15:41:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"assets\": [\n        {\n            \"id\": 1,\n            \"name\": \"Fighter\",\n            \"credit_cost\": 10,\n            \"valor_cost\": 0\n        },\n        {\n            \"id\": 101,\n            \"name\": \"Tetrahedron\",\n            \"credit_cost\": 0,\n            \"valor_cost\": 500\n        },\n        {\n            \"id\": 102,\n            \"name\": \"Hexahedron\",\n            \"credit_cost\": 0,\n            \"valor_cost\": 800\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
